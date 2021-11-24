@@ -13,12 +13,18 @@
   border: 3px solid #F9CF93;
   border-radius: 10px;
   background-color: #FAEEE0;
-  padding: 20px 10px;
+
 }
 
 .card-header {
   text-align: center;
-  border-bottom: 2px solid #F9E4C8
+  border-bottom: 2px solid #F9E4C8;
+  height: 100%;
+  color: #d2d2d2;
+  background-size: contain;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  padding: 20px 5px;
 }
 
 .awatar-section {
@@ -37,11 +43,14 @@
 
 .card-body {
   text-align: center;
+  padding: 20px 5px;
 }
 
 .rewards-section {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  margin: 10px 0;
 }
 
 .score {

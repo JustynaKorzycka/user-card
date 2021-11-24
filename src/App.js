@@ -1,38 +1,40 @@
 import './App.css';
 import { Card } from './components/Card';
-import img1 from './img/1.jpg';
-import img2 from './img/2.jpg';
-import img3 from './img/3.jpg';
 
 
 function App() {
+  const data = [
+    {
+      name: "Alfred",
+      surname: "Bogucki",
+      avatar:
+        "https://images.unsplash.com/flagged/photo-1570612861542-284f4c12e75f?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1770&q=80",
+      background:
+        "https://images.unsplash.com/photo-1544200175-ca6e80a7b323?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1281&q=80",
+      bronze: 1,
+      silver: 3,
+      gold: 1,
+    },
+    {
+      name: "Andrzej",
+      surname: "Mikucki",
+      avatar:
+        "https://images.unsplash.com/flagged/photo-1570612861542-284f4c12e75f?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1770&q=80",
+      background:
+        "https://images.unsplash.com/photo-1544200175-ca6e80a7b323?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1281&q=80",
+      bronze: 1,
+      silver: 8,
+      gold: 0,
+    },
+  ];
 
-  const rewards1 = {
-    bronze: 1,
-    silver: 3,
-    gold: 1
-  };
-  const rewards2 = {
-    bronze: 8,
-    silver: 0,
-    gold: 4
-  };
-    const rewards3 = {
-    bronze: 1,
-    silver: 3,
-    gold: 10
-  };
+
   return (
     <>
       <div className="wrapper">
         <div className="cards">
-          <Card userName="Anna" userSurname="Kowalska" awatar={img1} rewards={rewards1} />
-          <Card userName="Piotr" userSurname="Nowak" awatar={img2} rewards={rewards2} />
-          <Card userName="Katarzyna" userSurname="Strzała" awatar={img3} rewards={rewards3} />
-
-
+          {data.map(item => <Card data={item} key={ item.surname}/>)}
         </div>
-
       </div>
       
       </>
