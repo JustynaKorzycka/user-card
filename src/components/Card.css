@@ -1,0 +1,55 @@
+.cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  margin: 0 20px 0 20px;
+  gap: 25px
+}
+
+.card {
+  flex-basis: 40%;
+  min-width: 350px;
+  border: 3px solid #F9CF93;
+  border-radius: 10px;
+  background-color: #FAEEE0;
+  padding: 20px 10px;
+}
+
+.card-header {
+  text-align: center;
+  border-bottom: 2px solid #F9E4C8
+}
+
+.awatar-section {
+  margin: 10px auto 10px auto;
+  width: 200px;
+  height: 200px;
+
+}
+
+.awatar-section img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+.card-body {
+  text-align: center;
+}
+
+.rewards-section {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+
+.score {
+  font-size: 20px;
+}
+
+.score span {
+  display: block;
+  font-size: 30px;
+  font-weight: 700;
+}
