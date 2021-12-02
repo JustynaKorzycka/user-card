@@ -1,5 +1,6 @@
 import React from 'react';
 import './Card.css'
+import Medal from './Medal';
 
 export const Card = ({ data }) => {
 
@@ -12,15 +13,9 @@ export const Card = ({ data }) => {
       <div className="card-body">
         <h3>Rewards</h3>
         <div className="rewards-section">
-          {data.bronze !== 0 &&
-            <div className="score"><span>{data.bronze}</span>Bronze</div>
-          }
-          {data.silver !== 0 &&
-            <div className="score"><span>{data.silver}</span>Silver</div>
-          }
-          {data.gold !== 0 &&
-            <div className="score"><span>{data.gold}</span>Gold</div>
-          }
+          <Medal amount={data.bronze} type='Bronze' />
+          <Medal amount={data.silver} type='Silver'/>
+          <Medal amount={data.gold} type='Gold'/>
 
         </div>
       </div>
